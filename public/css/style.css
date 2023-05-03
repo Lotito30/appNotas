@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+	background-color: #f2f2f2;
+	font-family: Arial, sans-serif;
+    min-width: 420px;
+    overflow: hidden;
+}
+
+header {
+	background-color: #fff708;
+    text-align: center;
+}
+
+header h1{
+    padding:1em
+}
+header,
+a{
+    text-decoration: none;
+    color: #000;
+    list-style: none;
+}
+ul{
+    display:flex; 
+    padding:0.1em;
+    background-color: rgba(211,211,211,1);
+}
+nav{
+    text-indent: 1em;
+}
+/* DROPDOWN */
+  nav ul li ul {
+    display: none;
+  }
+  nav ul li:hover ul {
+    display: block;
+    margin-top: 0.3em;
+  }
+  nav ul li:hover li{
+    margin-top: 0.3em;
+  }
+  nav ul li button:hover{
+    height: 100px;
+  }
+  a:hover{
+    color:white;
+  }
+  /* FIN DROPDOWN */
+
+button{
+    border:0;
+    border-radius: 100%;
+    background-color: lightgray;
+    color:#000;
+    width: max-content;
+    width:70px;
+    height: 30px;
+    font-weight: bold;
+}
+li{
+    list-style: none;
+    text-decoration: none; 
+}
+input{
+    width:100%;
+    height: 6vh;
+    border:0;
+    transform-origin: top left;
+    transition: transform 0.2s;
+}
+input[type="text"]:focus
+ {
+    transform: scale(1.1);
+    border: 1px solid yellow;
+    outline: none;
+}
+input::placeholder,
+textarea::placeholder{
+    font-weight: bold;
+    font-size: 1.2em;    
+}
+   
+input::placeholder{
+text-transform: uppercase;
+}
+textarea,
+input{
+    text-indent: 1em;
+}
+textarea {
+	background-color: #fff;
+	border: none;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    height: 65vh;
+	resize: none;
+	width: 100%;
+    padding-top:1em;
+    outline: none;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+    padding:3em;
+	text-align: center;
+}
+  

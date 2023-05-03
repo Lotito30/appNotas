@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Notas</title>
+	<meta charset="UTF-8">
+	<title>Mi bloc de notas con estilo</title>
+	<link rel="stylesheet" href="./public/css/style.css">
 </head>
 <body>
-    <h1 style="text-align:center">Blog de notas coming soon</h1>
+	<header>
+		<h1>Bloc de Notas</h1>
+        <nav>
+            <ul>
+              <li>
+                <button>
+                  Archivos
+                  <ul>
+                    <li><a href="#">Nuevo</a></li>
+                    <li><a href="#">Abrir</a></li>
+                    <li><a href="#">Guardar</a></li>
+                  </ul>
+                </button>
+              </li>
+              <li>
+                <button>
+                  Editar
+                  <ul>
+                    <li><a href="#">Color</a></li>
+                    <li><a href="#">Fuente</a></li>
+                    <li><a href="#">Fondo</a></li>
+                  </ul>
+                </button>
+              </li>
+              <li>
+                <button>
+                  Ayuda
+                  <ul>
+                    <li><a href="#">Whatsapp</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Redes</a></li>
+                  </ul>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          
+	</header>
+    <div class="titulo">
+        <input autofocus type="text" placeholder="Titulo" >
+    </div>
+	<main>
+		<textarea placeholder="Ingresa tu mensaje" ></textarea>
+	</main>
+	<footer>
+		<p>Lotito30 © 2023 - Todos los derechos reservados</p>
+	</footer>
 </body>
 </html>
