@@ -1,12 +1,15 @@
+
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none; 
+    box-sizing: border-box;
 }
 body {
 	background-color: #f2f2f2;
 	font-family: Arial, sans-serif;
-    min-width: 420px;
-    overflow: hidden;
+    min-width: 420px;    
 }
 
 header {
@@ -17,53 +20,39 @@ header {
 header h1{
     padding:1em
 }
-header,
-a{
-    text-decoration: none;
-    color: #000;
-    list-style: none;
-}
-ul{
-    display:flex; 
-    padding:0.1em;
-    background-color: rgba(211,211,211,1);
-}
-nav{
-    text-indent: 1em;
-}
 /* DROPDOWN */
-  nav ul li ul {
-    display: none;
+  .navbar li {
+    float: left;
+    position: relative;
   }
-  nav ul li:hover ul {
+  .navbar a {
     display: block;
-    margin-top: 0.3em;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
   }
-  nav ul li:hover li{
-    margin-top: 0.3em;
+  .dropdown ul {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: lightgray;
+    
   }
-  nav ul li button:hover{
-    height: 100px;
+  .dropdown:hover ul {
+    display: block;
   }
-  a:hover{
-    color:white;
+  .dropdown ul li a:hover{
+    background-color: rgba(255, 255, 224,0.5);
+    
   }
+
+  .dropdown li {
+    width: 6em;
+  }
+  
   /* FIN DROPDOWN */
 
-button{
-    border:0;
-    border-radius: 100%;
-    background-color: lightgray;
-    color:#000;
-    width: max-content;
-    width:70px;
-    height: 30px;
-    font-weight: bold;
-}
-li{
-    list-style: none;
-    text-decoration: none; 
-}
 input{
     width:100%;
     height: 6vh;
@@ -94,7 +83,7 @@ textarea {
 	background-color: #fff;
 	border: none;
 	box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    height: 65vh;
+    height: 75vh;
 	resize: none;
 	width: 100%;
     padding-top:1em;
