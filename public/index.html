@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi bloc de notas con estilo</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-h1">
+      <img src="./img/logo-PhotoRoom.png-PhotoRoom.png" alt="Logo">
+      <h1>Bloc de Notas</h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="#">Archivo</a>
+          <ul>
+            <li><a href="#">Nuevo</a></li>
+            <li><a href="#">Abrir</a></li>
+            <li><a href="#">Guardar</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Editar</a>
+          <ul>
+            <li><a href="#">Color</a></li>
+            <li><a href="#">Fuente</a></li>
+            <li><a href="#">Fondo</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Ayuda</a>
+          <ul>
+            <li><a href="#">Whatsapp</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Redes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- PLANTILLA -->
+  <main>
+  <section class="contenedor">
+    <h3 >Abrir Nuevo</h3>
+    <div class="recuadro">
+      <button class="btn-1">+</button>
+    </div>
+    <h3>Guardada</h3>
+    <div class="guardada">
+     <a href="#">
+      <div class="recuadro1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
+          adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
+          obcaecati.</p>
+      </div>
+     </a>
+      <a href="#">
+        <div class="recuadro1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
+            adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
+            obcaecati.</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="recuadro1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
+            adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
+            obcaecati.</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="recuadro1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
+            adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
+            obcaecati.</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="recuadro1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
+            adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
+            obcaecati.</p>
+        </div>
+       </a>
+        <a href="#">
+          <div class="recuadro1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
+              adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
+              obcaecati.</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="recuadro1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
+              adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
+              obcaecati.</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="recuadro1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
+              adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
+              obcaecati.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="formulario contenedor">
+    <form action="formulario" method="POST">
+      <div class="titulo">
+        <input autofocus type="text" placeholder="Titulo" />
+      </div>
+      <div class="textarea">
+        <textarea placeholder="Ingresa tu mensaje"></textarea>
+      </div>
+    </form>
+  </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Lotito30 © 2023 - Todos los derechos reservados</p>
+  </footer>
+  <!-- Script JavaScript menu desplegable -->
+  <script>
+    var dropdowns = document.getElementsByClassName("dropdown")[0];
+
+    menu.addEventListener("mouseover", function () {
+      // Ocultar los demás menús desplegables
+      var dropdownUl = this.querySelector("ul");
+      for (var i = 0; i < submenus.length; i++) {
+        dropdownUl[i].style.display = "none";
+      }
+      // Mostrar el submenú correspondiente
+      dropdownUl.style.display = "block";
+    });
+  </script>
+</body>
+
+</html>

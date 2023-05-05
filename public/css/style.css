@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+/* font-family: 'Roboto Slab', serif; */
 *{
     margin: 0;
     padding: 0;
@@ -6,25 +7,43 @@
     text-decoration: none; 
     box-sizing: border-box;
 }
+a{
+  color:black;
+}
+html{
+  background-color: rgb(234, 234, 234);
+}
+main{
+  background-color: lightgray;
+}
 body {
-	background-color: #f2f2f2;
 	font-family: Arial, sans-serif;
-    min-width: 420px;    
+  min-width: 420px;  
+  max-width: 1200px; 
+  margin:0 auto;
 }
-
 header {
-	background-color: #fff708;
-    text-align: center;
+	background-color: #f5d03f ;
+}
+.logo-h1{
+  display:flex;
+  align-items: center;
+  font-family: 'Roboto Slab', serif;
+}
+.logo-h1 img{
+  width:110px;
+  height:110px;
+  padding:15px;
 }
 
-header h1{
-    padding:1em
-}
 /* DROPDOWN */
-  .navbar li {
-    float: left;
-    position: relative;
-  }
+.navbar ul {
+  background-color: #000;
+  display: flex;
+}
+.navbar ul li a{
+  color:#d8d5d5;
+}
   .navbar a {
     display: block;
     color: black;
@@ -36,34 +55,84 @@ header h1{
     display: none;
     position: absolute;
     z-index: 1;
-    background-color: lightgray;
+    background-color: rgb(171, 169, 169);
     
   }
   .dropdown:hover ul {
     display: block;
   }
   .dropdown ul li a:hover{
-    background-color: rgba(255, 255, 224,0.5);
-    
+    background-color: rgba(255, 255, 224,0.5); 
+    color:#000;
   }
-
   .dropdown li {
     width: 6em;
-  }
-  
+  }  
   /* FIN DROPDOWN */
+.contenedor{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor h3{
+  margin:25px 0;
+  font-size: 800;
+  font-family: 'Roboto Slab', serif;
+  
+}
+.contenedor .recuadro{
+    width:10em;
+    height:10em;
+    border:1px solid #000;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #d8d5d5; 
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+.contenedor button{
+  width:40px;
+  height:40px;
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  cursor: pointer;
+}
+.guardada{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5,1fr);
+  margin-bottom: 30px;
 
+
+}
+.guardada .recuadro1{
+  border:1px solid #000;
+  width:200px;
+  height:10em;
+  background-color: #d8d5d5;
+  border-radius: 5px;
+  padding:10px;
+}
+.recuadro1 p{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+}
+.formulario{
+  display:none;
+}
 input{
     width:100%;
     height: 6vh;
     border:0;
-    transform-origin: top left;
-    transition: transform 0.2s;
 }
 input[type="text"]:focus
  {
-    transform: scale(1.1);
-    border: 1px solid yellow;
+    border: 1px solid lightyellow;
     outline: none;
 }
 input::placeholder,
