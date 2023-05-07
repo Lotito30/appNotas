@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mi bloc de notas con estilo</title>
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/a42b43434c.js" crossorigin="anonymous"></script>
+  <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- JAVASCRIPT -->
+  <script src="./js/function.js"></script>
 </head>
 
 <body>
@@ -19,9 +24,9 @@
         <li class="dropdown">
           <a href="#">Archivo</a>
           <ul>
-            <li><a href="#">Nuevo</a></li>
-            <li><a href="#">Abrir</a></li>
-            <li><a href="#">Guardar</a></li>
+            <li><a onclick="cambiarDisplayNuevo()" href="#">Nuevo</a></li>
+            <li><a href="#guardada">Abrir</a></li>
+            <li><a onclick="cambiarDisplayCancelarYGuardar()()" href="#">Atras</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -43,89 +48,52 @@
       </ul>
     </nav>
   </header>
+
   <!-- PLANTILLA -->
-  <main>
-  <section class="contenedor">
-    <h3 >Abrir Nuevo</h3>
-    <div class="recuadro">
-      <button class="btn-1">+</button>
-    </div>
-    <h3>Guardada</h3>
-    <div class="guardada">
-     <a href="#">
-      <div class="recuadro1">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
-          adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
-          obcaecati.</p>
+  <section id="contenedor" class="container">
+    <div class="centro">
+      <h3>Nuevo</h3>
+      <div class="abrirNuevo">
+        <button class="btn-1" onclick="cambiarDisplayNuevo()" >+</button>
       </div>
-     </a>
-      <a href="#">
-        <div class="recuadro1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
-            adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
-            obcaecati.</p>
-        </div>
-      </a>
-      <a href="#">
-        <div class="recuadro1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
-            adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
-            obcaecati.</p>
-        </div>
-      </a>
-      <a href="#">
-        <div class="recuadro1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
-            adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
-            obcaecati.</p>
-        </div>
-      </a>
-      <a href="#">
-        <div class="recuadro1">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
-            adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
-            obcaecati.</p>
-        </div>
-       </a>
-        <a href="#">
-          <div class="recuadro1">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
-              adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
-              obcaecati.</p>
-          </div>
-        </a>
-        <a href="#">
-          <div class="recuadro1">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
-              adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
-              obcaecati.</p>
-          </div>
-        </a>
-        <a href="#">
-          <div class="recuadro1">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit iste nulla aperiam illo sit
-              adipisci natus voluptate quis, maxime voluptatem quisquam itaque commodi modi aliquid iure, animi cumque
-              obcaecati.</p>
-          </div>
-        </a>
+      <h3>Guardados</h3>
+      <div id="guardada">
+        <div 
+        class="abrirNuevo" 
+        id="borrar">Vacio</div>
       </div>
     </div>
   </section>
-  <section class="formulario contenedor">
-    <form action="formulario" method="POST">
-      <div class="titulo">
-        <input autofocus type="text" placeholder="Titulo" />
-      </div>
-      <div class="textarea">
-        <textarea placeholder="Ingresa tu mensaje"></textarea>
-      </div>
-    </form>
+
+  <!-- FORMULARIO -->
+  <section id="formulario" class="container">
+    <div class="centro">
+       <form action="" method="" onsubmit="return guardar()" >
+         <div class="titulo">
+           <input autofocus required title="Este campo es obligatorio" type="text" placeholder="Titulo" id="titulo"/>
+         </div>
+      
+         <div class="textarea">
+           <textarea placeholder="Ingresa tu mensaje" id="textarea" ></textarea>
+         </div>
+         <div class="botones-flex">
+           <button class="guardar"  type="submit" value="Guardar">Guardar</button>
+           <button class="reset" type="reset" value="reset"  onclick="cambiarDisplayCancelarYGuardar()">Cancelar</button>
+         </div>
+       </form>
+    </div>
   </section>
-  </main>
 
   <!-- FOOTER -->
-  <footer>
-    <p>Lotito30 © 2023 - Todos los derechos reservados</p>
+  <footer class="footer">
+    <h3>Sigueme en Redes Sociales</h3>
+    <div class="icon-footer">
+      <a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="http://www.github.com/lotito30" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
+    <p>Lotito30 © 2023. Todos los derechos reservados  Lotito30</p>
   </footer>
   <!-- Script JavaScript menu desplegable -->
   <script>
