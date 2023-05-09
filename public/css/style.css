@@ -43,9 +43,27 @@ header {
 .navbar a {
   display: block;
   padding: 10px 16px;
+  position: relative;
 }
-.dropdown ul li:not(:last-child)::after{
-  content: "--------";
+.navbar .navbar-content::after{
+  content: "";
+  position: absolute;
+  left:15px;
+  bottom:4px;
+  width:60%;
+  height:3px;
+  background-color: #FFF;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .5s;
+  transform-origin: left;
+}
+.navbar .navbar-content:hover::after{
+  transform: scaleX(1);
+}
+.dropdown ul li{
+  width:100%;
+  border-bottom: 1px solid #000;
 }
 .dropdown ul {
   display: none;
@@ -121,10 +139,11 @@ header {
 }
 #guardada div {
   border: 1px solid #000;
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 5px;
   padding: 10px;
+  margin-top:5px;
 }
 #guardada div p:nth-child(1) {
   font-size: 20px;
@@ -188,7 +207,7 @@ button[type="reset"] {
   background-color: #3e8e41;
 }
 .reset:hover {
-  background-color: #cd3a2f;
+  background-color: #a52b22;
 }
 .botones-flex {
   display: flex;
@@ -248,7 +267,8 @@ button[type="reset"] {
   color: #ffffff;
 }
 
-.fa-twitter:hover{
+.fa-twitter:hover,
+.fa-github:hover{
   background: linear-gradient(to right top, #42a9ec, #358de6);
   color: #ffffff;
 }

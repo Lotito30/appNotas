@@ -22,15 +22,7 @@
     <nav class="navbar">
       <ul>
         <li class="dropdown">
-          <a href="#">Archivo</a>
-          <ul>
-            <li><a onclick="cambiarDisplayNuevo()" href="#">Nuevo</a></li>
-            <li><a href="#guardada">Abrir</a></li>
-            <li><a onclick="cambiarDisplayCancelarYGuardar()()" href="#">Atras</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Editar</a>
+          <a href="#" class="navbar-content">Editar</a>
           <ul>
             <li><a href="#">Color</a></li>
             <li><a href="#">Fuente</a></li>
@@ -38,7 +30,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#">Ayuda</a>
+          <a href="#" class="navbar-content">Ayuda</a>
           <ul>
             <li><a href="#">Whatsapp</a></li>
             <li><a href="#">Email</a></li>
@@ -56,6 +48,7 @@
       <div class="abrirNuevo">
         <button class="btn-1" onclick="cambiarDisplayNuevo()" >+</button>
       </div>
+      <hr>
       <h3>Guardados</h3>
       <div id="guardada">
         <div 
@@ -69,13 +62,8 @@
   <section id="formulario" class="container">
     <div class="centro">
        <form action="" method="" onsubmit="return guardar()" >
-         <div class="titulo">
            <input autofocus required title="Este campo es obligatorio" type="text" placeholder="Titulo" id="titulo"/>
-         </div>
-      
-         <div class="textarea">
            <textarea placeholder="Ingresa tu mensaje" id="textarea" ></textarea>
-         </div>
          <div class="botones-flex">
            <button class="guardar"  type="submit" value="Guardar">Guardar</button>
            <button class="reset" type="reset" value="reset"  onclick="cambiarDisplayCancelarYGuardar()">Cancelar</button>
@@ -88,27 +76,13 @@
   <footer class="footer">
     <h3>Sigueme en Redes Sociales</h3>
     <div class="icon-footer">
-      <a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-      <a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="http://www.instagram.com/jesuslotito" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="http://www.facebook.com/jesus.dominguez.5439" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="http://www.twitter.com/dominguezj21" target="_blank"><i class="fa-brands fa-twitter"></i></a>
       <a href="http://www.github.com/lotito30" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
-    <p>Lotito30 © 2023. Todos los derechos reservados  Lotito30</p>
+    <p>Lotito30 © 2023. Todos los derechos reservados</p>
   </footer>
-  <!-- Script JavaScript menu desplegable -->
-  <script>
-    var dropdowns = document.getElementsByClassName("dropdown")[0];
-
-    menu.addEventListener("mouseover", function () {
-      // Ocultar los demás menús desplegables
-      var dropdownUl = this.querySelector("ul");
-      for (var i = 0; i < submenus.length; i++) {
-        dropdownUl[i].style.display = "none";
-      }
-      // Mostrar el submenú correspondiente
-      dropdownUl.style.display = "block";
-    });
-  </script>
 </body>
 
 </html>
