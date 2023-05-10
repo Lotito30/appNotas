@@ -7,16 +7,16 @@
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/a42b43434c.js" crossorigin="anonymous"></script>
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <!-- JAVASCRIPT -->
-  <script src="./js/function.js"></script>
+  <script src="/js/function.js"></script>
 </head>
 
 <body>
   <!-- HEADER -->
   <header>
     <div class="logo-h1">
-      <img src="./img/logo-PhotoRoom.png-PhotoRoom.png" alt="Logo">
+      <img src="/img/logo-PhotoRoom.png-PhotoRoom.png" alt="Logo">
       <h1>Bloc de Notas</h1>
     </div>
     <nav class="navbar">
@@ -32,9 +32,7 @@
         <li class="dropdown">
           <a href="#" class="navbar-content">Ayuda</a>
           <ul>
-            <li><a href="#">Whatsapp</a></li>
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Redes</a></li>
+            <li><a href="/preguntas">Preguntas Frecuentes</a></li>
           </ul>
         </li>
       </ul>
@@ -46,7 +44,7 @@
     <div class="centro">
       <h3>Nuevo</h3>
       <div class="abrirNuevo">
-        <button class="btn-1" onclick="cambiarDisplayNuevo()" >+</button>
+        <button class="btn-1" onclick="cambiarDisplayNuevo()">+</button>
       </div>
       <hr>
       <h3>Guardados</h3>
@@ -57,21 +55,19 @@
       </div>
     </div>
   </section>
-
-  <!-- FORMULARIO -->
-  <section id="formulario" class="container">
-    <div class="centro">
-       <form action="" method="" onsubmit="return guardar()" >
-           <input autofocus required title="Este campo es obligatorio" type="text" placeholder="Titulo" id="titulo"/>
-           <textarea placeholder="Ingresa tu mensaje" id="textarea" ></textarea>
-         <div class="botones-flex">
-           <button class="guardar"  type="submit" value="Guardar">Guardar</button>
-           <button class="reset" type="reset" value="reset"  onclick="cambiarDisplayCancelarYGuardar()">Cancelar</button>
-         </div>
-       </form>
-    </div>
-  </section>
-
+<!-- FORMULARIO -->
+<section id="formulario" class="container"> 
+  <a href="/" class="btn-1 home">
+    <i class="fas fa-home"></i>
+    </a>
+  <div class="centro">
+    <form method="GET" onsubmit="return guardar()" >
+      <input autofocus required title="Este campo es obligatorio" type="text" placeholder="Titulo" id="titulo"/>
+      <textarea placeholder="Ingresa tu mensaje" id="textarea" ></textarea>
+      <button class="guardar" type="submit" value="Guardar">Guardar</button>
+    </form>
+  </div>
+</section>
   <!-- FOOTER -->
   <footer class="footer">
     <h3>Sigueme en Redes Sociales</h3>

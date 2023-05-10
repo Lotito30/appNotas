@@ -8,16 +8,6 @@ var formulario = document.getElementById("formulario");
   contenedor.style.display = "none";
   formulario.style.display = "block";
 }
-
-// Cambiar el valor del estilo "display" de los elementos "contenedor" y "formulario" para ocultar el formulario
-function cambiarDisplayCancelarYGuardar() {
-    // Obtener los elementos "contenedor" y "formulario"
-var contenedor = document.getElementById("contenedor");
-var formulario = document.getElementById("formulario");
-
-  contenedor.style.display = "block";
-  formulario.style.display = "none";
-}
 function guardar(){
     // obtener el valor de los campos de titulo y textarea
     var titulo = document.getElementById("titulo").value
@@ -33,6 +23,7 @@ function guardar(){
         // Borrar el contenido de los campos
         borrarCampos()
     }
+    return false
 }
 function borrarDiv(){
     var contenedor = document.getElementById("guardada")
