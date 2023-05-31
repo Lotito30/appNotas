@@ -9,12 +9,15 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+
 body {
   font-family: var(--letra);
   min-width: 420px;
   max-width: 1200px;
+  max-height: 550px;
   margin: 0 auto;
   background-color: rgba(245, 208, 63,0.2);
+  background: url("/img/fondohtml.jfif");
 
 /* HEADER */
 }
@@ -87,7 +90,200 @@ header {
   width:105px;
   text-align: center;
 }
+/* incio de sesion */
 
+#registrarse,
+#recuperarContrasena{
+  display: none;
+}
+
+.conteiner{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 214, 214);
+}
+.volver{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  
+}
+.volver i{
+  color: rgb(0, 0, 0);
+}
+.circulo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 50%;
+  overflow: hidden;
+  background-color: rgb(255, 184, 0);
+  clip-path: circle(25rem at 100% 100%);
+ } 
+.conteinerContent{
+  background-color: rgb(70, 70, 70);
+  border: .1rem solid #fff;
+  border-radius: .5rem;
+  padding: 1rem 2rem 1rem 2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 450px;
+  padding: 50px;
+}
+#recuperarContrasena .conteinerContent{
+  width: 500px;
+  padding: 50px; 
+}
+#recuperarContrasena h3{
+  margin-top: 1rem;
+}
+#recuperarContrasena form{
+  margin: 0 auto;
+  width: 90%;
+}
+.conteinerContent h1{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.contenidoinicioSesion{
+  display: flex;
+  flex-direction: column;  
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.absolute{
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #fff;
+  margin: 0 auto;
+}
+
+.absolute label{
+  position: absolute;
+  top: 50%;
+  pointer-events: none;
+  font-weight: 500;
+  margin-left: .5rem;
+  font-size: 1.1rem;
+  transition: .5s;
+  color: #ababab;
+}
+
+.absolute input:focus + label,
+.absolute label.active{
+  top:3px;
+  font-weight: bold;
+}
+
+.absolute input{
+  width: 95%;
+  height: 20px;
+  position: absolute;
+  background: transparent;
+  border: none;
+  outline: none;
+  top:50%;
+  padding: 0 .5rem;
+  font-size: 1.2rem;
+}
+.absolute input.active{
+  background: red;
+}
+.absolute span i{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 1.2rem;
+}
+
+form button{
+  color: white;  
+  padding: .5rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-size: medium;
+  cursor: pointer;
+}
+form .submit{
+  background-color: rgb(7, 168, 130);
+}
+form .submit:hover{
+  background-color: rgb(4, 180, 138);
+}
+form .reset{
+  background-color: rgb(187, 2, 2);
+}
+form .reset:hover{
+  background-color: rgb(218, 2, 2);
+}
+.recuerdame{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+.contenidoinicioSesion p{
+  text-align: center;
+  margin-top: .5rem;
+  font-size: .9rem;
+
+}
+.contenidoinicioSesion a{
+  text-decoration: none;
+  color: rgb(255, 184, 0);
+  font-weight: 700;
+  margin-left: 3px;
+  text-transform: capitalize;
+}
+.contenidoinicioSesion a:hover{
+  color: rgba(0,214,214,0.8);
+}
+
+.btn-redSocial{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 100%;
+  gap: .5rem;
+}
+.btn-redSocial div{
+  height: 2.5rem;
+  text-align: center;
+  border-radius: .3rem;
+  background-color: #ffffff;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn-redSocial div:hover{
+  background-color: #eeebeb;
+}
+.btn-redSocial div span{
+  color:black;
+}
+.btn-redSocial .google img{
+  width: 35px;
+  margin-left: -15px;
+}
+
+.btn-redSocial .fb img{
+  width: 35px;
+}
+
+/* fin incio de sesion */
 /* MAIN */
 #contenedor{
   display:block;
@@ -95,7 +291,7 @@ header {
 .container {
   padding: 15px;
   border: 1px solid #000;
-  background-color: rgba(245, 208, 63,0.2);
+  background-color: #ebebeb;
 }
 .container .centro {
   background-color: white;
@@ -155,6 +351,15 @@ header {
 /* FORMULARIO */
 #formulario {
   display: none;
+}
+#formulario .titulo{
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+#formulario .titulo span{
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 #formulario .centro{
   padding-top:25px;

@@ -51,18 +51,22 @@
       <div id="guardada">
         <div 
         class="abrirNuevo" 
-        id="borrar">Vacio</div>
+        id="borrar">Vacio
+        </div>
       </div>
     </div>
   </section>
 <!-- FORMULARIO -->
 <section id="formulario" class="container"> 
-  <a href="/" class="btn-1 home">
-    <i class="fas fa-home"></i>
-    </a>
+  <div class="titulo">
+    <a href="/" class="btn-1 home">
+      <i class="fas fa-home"></i>
+      </a>
+      <span id="mensaje"></span>
+  </div>
   <div class="centro">
-    <form method="GET" onsubmit="return guardar()" >
-      <input autofocus required title="Este campo es obligatorio" type="text" placeholder="Titulo" id="titulo"/>
+    <form method="" onsubmit="return guardar()" >
+      <input autofocus type="text" placeholder="Titulo" id="titulo"/>
       <textarea placeholder="Ingresa tu mensaje" id="textarea" ></textarea>
       <button class="guardar" type="submit" value="Guardar">Guardar</button>
     </form>
