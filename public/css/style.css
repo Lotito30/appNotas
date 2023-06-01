@@ -14,7 +14,6 @@ body {
   font-family: var(--letra);
   min-width: 420px;
   max-width: 1200px;
-  max-height: 550px;
   margin: 0 auto;
   background-color: rgba(245, 208, 63,0.2);
   background: url("/img/fondohtml.jfif");
@@ -28,6 +27,7 @@ header {
   display: flex;
   align-items: center;
   margin-left:35px;
+  text-shadow: 5px 3px .3rem #222222;
 }
 .logo-h1 img {
   width: 110px;
@@ -55,7 +55,7 @@ header {
   bottom:4px;
   width:60%;
   height:3px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 5px;
   transform: scaleX(0);
   transition: .5s;
@@ -90,6 +90,7 @@ header {
   width:105px;
   text-align: center;
 }
+
 /* incio de sesion */
 
 #registrarse,
@@ -102,27 +103,24 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(0, 214, 214);
 }
 .volver{
   position: absolute;
   top: 1%;
   left: 1%;
-  
+  background-color: #000;
+  padding: 1rem;
+  border-radius: 50%;
 }
 .volver i{
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
-.circulo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  padding-bottom: 50%;
-  overflow: hidden;
-  background-color: rgb(255, 184, 0);
-  clip-path: circle(25rem at 100% 100%);
- } 
+.volver:hover i{
+  color:#000;
+}
+.volver:hover{
+  background-color: #fff;
+}
 .conteinerContent{
   background-color: rgb(70, 70, 70);
   border: .1rem solid #fff;
@@ -132,21 +130,13 @@ header {
   text-align: center;
   width: 450px;
   padding: 50px;
+  color: #fff;
 }
-#recuperarContrasena .conteinerContent{
-  width: 500px;
-  padding: 50px; 
-}
-#recuperarContrasena h3{
-  margin-top: 1rem;
-}
-#recuperarContrasena form{
-  margin: 0 auto;
-  width: 90%;
-}
+
 .conteinerContent h1{
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: #fff;
 }
 .contenidoinicioSesion{
   display: flex;
@@ -195,9 +185,10 @@ form{
   top:50%;
   padding: 0 .5rem;
   font-size: 1.2rem;
+  color: #fff;
 }
-.absolute input.active{
-  background: red;
+.absolute input::placeholder{
+  color: #fff;
 }
 .absolute span i{
   position: absolute;
@@ -205,16 +196,18 @@ form{
   right: 0;
   font-size: 1.2rem;
 }
-
 form button{
   color: white;  
   padding: .5rem;
-  width: 100%;
   margin: 0 auto;
+  width: 50%;
   margin-top: 1rem;
   font-size: medium;
   cursor: pointer;
+  border-radius: .5rem;
+  box-shadow: 0 0 .5rem #666;
 }
+
 form .submit{
   background-color: rgb(7, 168, 130);
 }
@@ -230,24 +223,25 @@ form .reset:hover{
 .recuerdame{
   display: flex;
   align-items: center;
+  justify-content: start;
   gap: .5rem;
-  margin-top: .5rem;
-}
+  margin: .5rem 0;
+  }
+
 .contenidoinicioSesion p{
   text-align: center;
   margin-top: .5rem;
   font-size: .9rem;
-
 }
 .contenidoinicioSesion a{
   text-decoration: none;
-  color: rgb(255, 184, 0);
+  color: rgb(242, 255, 0);
   font-weight: 700;
   margin-left: 3px;
   text-transform: capitalize;
 }
 .contenidoinicioSesion a:hover{
-  color: rgba(0,214,214,0.8);
+  color: rgb(212, 198, 0);
 }
 
 .btn-redSocial{
@@ -282,6 +276,17 @@ form .reset:hover{
 .btn-redSocial .fb img{
   width: 35px;
 }
+#recuperarContrasena .conteinerContent{
+  width: 600px;
+  padding: 50px; 
+}
+#recuperarContrasena h3{
+  margin-top: 1rem;
+}
+#recuperarContrasena form{
+  margin: 0 auto;
+  width: 90%;
+}
 
 /* fin incio de sesion */
 /* MAIN */
@@ -292,6 +297,7 @@ form .reset:hover{
   padding: 15px;
   border: 1px solid #000;
   background-color: #ebebeb;
+
 }
 .container .centro {
   background-color: white;
@@ -364,15 +370,7 @@ form .reset:hover{
 #formulario .centro{
   padding-top:25px;
 }
-input {
-  background-color: none;
-  width: 100%;
-  height: 4vh;
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: capitalize;
-  outline: none;
-}
+
 input::placeholder{
   font-size: 19px;  
 }
@@ -394,32 +392,6 @@ textarea {
   outline: none;
   font-size: 16px;
 }
-.reset,
-.guardar {
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  background-color: #4caf50;
-  color: #fff;
-  cursor: pointer;
-  margin: 10px;
-}
-button[type="reset"] {
-  background-color: #f44336;
-}
-.guardar:hover {
-  background-color: #3e8e41;
-}
-.reset:hover {
-  background-color: #a52b22;
-}
-.botones-flex {
-  display: flex;
-  justify-content: space-evenly;
-}
 
 /* PREGUNTAS FRECUENTES */
 .faq h2 {
@@ -439,16 +411,8 @@ button[type="reset"] {
   margin-left: 40px;
 }
 
-.faq p {
-  margin-bottom: 20px;
-  text-indent: 1rem;
-}
 
-.home{
-  margin:20px 5px;
-  font-size: 35px;
-  color:black;
-}
+
 /*FOOTER*/
 .footer{
   background: black;
@@ -470,12 +434,26 @@ button[type="reset"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+.sigueme{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  text-transform: capitalize;
+  background-color: #fff;
+  border-radius:.5rem;
+  padding: .5rem;
+  gap: .5rem;
+  box-shadow: 0 0 .5rem #fff;
+}
+.sigueme p{
+  color: black;
 }
 
 .fa-brands{
-  font-size: 16px; 
-  margin: 10px;
-  background: #fff;
+  font-size: 1rem; 
   width: 25px;
   height: 25px;
   display: flex;
@@ -489,26 +467,26 @@ button[type="reset"] {
   color: #ffffff;
 }
 
-.fa-instagram:hover{
-  color: black;
-}
-
 .fa-facebook{
-  color: #1E4595;
-}
-
-.fa-facebook:hover{
   background: #1E4595;
   color: #ffffff;
 }
 
-.fa-twitter:hover,
-.fa-github:hover{
+.fa-facebook:hover{
+  background: #0655f3;
+  
+}
+
+.fa-twitter,
+.fa-github{
   background: linear-gradient(to right top, #42a9ec, #358de6);
   color: #ffffff;
 }
 
-.fa-twitter{
-  color: #358de6;
-  background-color: #ffffff;
+.fa-twitter:hover,
+.fa-github:hover,
+.fa-facebook:hover,
+.fa-instagram:hover{
+  color:#000;
+
 }

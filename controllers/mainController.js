@@ -6,7 +6,10 @@ const mainController = {
       },
     preguntas:(req, res) => {
         res.sendFile(path.join(__dirname, '../views/preguntas.html'))
-      }
+      },
+    inicioSesion:(req, res) => {
+        res.sendFile(path.join(__dirname, '../views/inicioSesion.html'))
+      },
 }
 
 module.exports = mainController

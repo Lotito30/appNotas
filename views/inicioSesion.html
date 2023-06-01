@@ -8,14 +8,12 @@
   <script src="https://kit.fontawesome.com/a42b43434c.js" crossorigin="anonymous"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="/css/style.css" />
-  <!-- JAVASCRIPT -->
-  <script src="/js/function.js"></script>
 </head>
 
 <body>
     <section id="iniciarSesion">
         <div class="conteiner">
-            <a href="../index.html" class="volver"><i class="fas fa-home fa-2x"></i></a>
+            <a href="/" class="volver"><i class="fas fa-home fa-2x"></i></a>
             
             <div class="conteinerContent">
                 <h1>Iniciar Sesión</h1>
@@ -36,18 +34,19 @@
                         
                     </form>
                     <div class="recuerdame">
-                        <input type="checkbox" name="recuerdame" id=""><label for="recuerdame">Recuerdame</label>
+                        <input type="checkbox" name="recuerdame" id="">
+                        <label for="recuerdame">Recuerdame</label>
                     </div>
                     <p>Se te olvido la contraseña?
                         <a href="#" id="recuperar">recuperar contraseña</a>
                     </p>
                     <div class="btn-redSocial">
                         <div class="google">
-                            <img src="../imagenes/google.png" alt="">
+                            <img src="../img/google.png" alt="">
                             <span>Continua con Google</span>
                         </div>
                         <div class="fb">
-                            <img src="../imagenes/facebook.png" alt="">
+                            <img src="../img/facebook.png" alt="">
                             <span>Continua con Facebook</>
                         </div>
                     </div>
@@ -61,14 +60,14 @@
         <div class="conteiner">
             <div class="conteinerContent">
                 <h1>Recuperar Contraseña</h1>
-                <form action="" id="formulario">
+                <form action="" id="formularioInicio">
                     <div class="absolute">
                         <span class="icono"><i class="fas fa-envelope"></i></span>
                         <input type="email" id="inputForm" name="email" autocomplete="off">
                         <label for="email">Email</label>
                     </div>
                     <button class="submit" type="submit" ><i class="fas fa-key"></i> Recuperar Contraseña</button>  
-            <button class="reset" ><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                    <button class="reset" ><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
                 </form>
                 <h3 id="mensaje"></h3>
             </div>
@@ -107,6 +106,45 @@
             </div>
         </div>
     </section>
+    <script>
+        // funcion para que los label se queden arriba cuando haya caracteres dentro del input 
+        const inputs = document.querySelectorAll('.absolute input');
+        inputs.forEach(input => {
+            const label = input.nextElementSibling;           
+            input.addEventListener('input', () => {
+                if (input.value !== '') {
+                    label.classList.add('active');
+                } else {
+                    label.classList.remove('active');
+                }
+            });
+        });
+
+        // funcion para cambiar displayen inicio de sesion
+        var inicio = document.getElementById('iniciarSesion')
+        var recuperarContrasena = document.getElementById('recuperarContrasena')
+        var registrarse = document.getElementById('registrarse')
+
+        var recuperar = document.getElementById('recuperar')
+        recuperar.addEventListener('click', function(event) {
+            event.preventDefault()
+            inicio.style.display = 'none'
+            recuperarContrasena.style.display = 'block'
+            })
+
+        var registrar = document.getElementById('registrar')
+        registrar.addEventListener('click', function(event){
+            event.preventDefault()
+            inicio.style.display = 'none'
+            registrarse.style.display = 'block'  
+        })
+
+        document.getElementsByClassName('reset').addEventListener('click', function(event){
+            event.preventDefault()
+            history.back()  
+        })
+
+    </script>
 </body>
 
 </html>
