@@ -1,6 +1,6 @@
 const path = require('path')
 const express = require('express')
-
+const PORT = 80 || 443
 const app = express()
 app.use(express.static('public'));
 
@@ -21,7 +21,7 @@ app.use('/',mainRoutes)
 //   res.sendFile(path.join(__dirname, 'views/preguntas.html'))
 // });
 
-app.listen(3000, () => 
+app.listen(PORT, () => 
     console.log("Servidor Corriendo")
 );
 
