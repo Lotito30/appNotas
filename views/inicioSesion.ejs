@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/head') %>
+
+    <body>
+        <%- include('./partials/header') %>
+
+    <div class="centro">
+        <section id="iniciarSesion">
+            <div class="conteiner">
+                <a href="/" class="volver inicio"><i class="fas fa-home fa-2x"></i></a>
+                <div class="conteinerContent">
+                    <h1>Iniciar Sesión</h1>
+                    <div class="contenidoinicioSesion">
+                        <form action="">
+                            <div class="absolute">
+                                <span class="icono"><i class="fas fa-user-circle"></i></span>
+                                <input type="text" id="inputForm" autocomplete="off">
+                                <label for="usuario">Usuario</label>
+                            </div>
+                            <div class="absolute">
+                                <span class="icono"><i class="fas fa-lock"></i></span>
+                                <input type="password" id="inputForm" autocomplete="off">
+                                <label for="password">Contraseña</label>
+                            </div>
+                        <button class="submit"><i class="fas fa-sign-in"></i> Iniciar</button>
+                    </form>
+                        <div class="recuerdame">
+                            <input type="checkbox" name="recuerdame" id="">
+                            <label for="recuerdame">Recuerdame</label>
+                        </div>
+                        <p>Se te olvido la contraseña?
+                            <a href="#" id="recuperar">recuperar contraseña</a>
+                        </p>
+                        <div class="btn-redSocial">
+                            <div class="google">
+                                <img src="../img/google.png" alt="">
+                                <span>Continua con Google</span>
+                            </div>
+                            <div class="fb">
+                                <img src="../img/facebook.png" alt="">
+                                <span>Continua con Facebook</->
+                            </div>
+                        </div>
+                    <p>No tienes usuario?<a href="#" id="registrar">registrarse</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <section id="recuperarContrasena">
+                    <div class="conteiner">
+                        <div class="conteinerContent">
+                            <h1>Recuperar Contraseña</h1>
+                            <form action="" id="formularioInicio">
+                                <div class="absolute">
+                                    <span class="icono"><i class="fas fa-envelope"></i></span>
+                                    <input type="email" id="inputForm" name="email" autocomplete="off">
+                                    <label for="email">Email</label>
+                                </div>
+                                <button class="submit" type="submit"><i class="fas fa-key"></i> Recuperar
+                                    Contraseña</button>
+                                <button class="reset"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                            </form>
+                            <h3 id="mensaje"></h3>
+                        </div>
+                    </div>
+                </section>
+                <section id="registrarse">
+                    <div class="conteiner">
+                        <div class="conteinerContent">
+                            <h1>Registrarse</h1>
+                            <form action="">
+                                <div class="absolute">
+                                    <span class="icono"><i class="fas fa-user-alt"></i></span>
+                                    <input type="text" id="inputForm" autocomplete="off">
+                                    <label for="nombre">Nombre</label>
+                                </div>
+                                <div class="absolute">
+                                    <span class="icono"><i class="fas fa-envelope"></i></span>
+                                    <input type="email" id="inputForm" name="mail" autocomplete="off">
+                                    <label for="mail">Email</label>
+                                </div>
+                                <div class="absolute">
+                                    <span class="icono"><i class="fas fa-user-circle"></i></span>
+                                    <input type="text" id="inputForm" autocomplete="off">
+                                    <label for="usuario">Usuario</label>
+                                </div>
+                                <div class="absolute">
+                                    <span class="icono"><i class="fas fa-lock"></i></span>
+                                    <input type="password" id="inputForm" autocomplete="off">
+                                    <label for="password">Contraseña</label>
+                                </div>
+
+                                <button class="submit" id="submit" type="submit"><i class="fas fa-user-plus"></i>
+                                    Registrarse</button>
+
+                                <button class="reset"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <%- include('./partials/footer') %>
+                <script>
+                    // funcion para que los label se queden arriba cuando haya caracteres dentro del input 
+                    const inputs = document.querySelectorAll('.absolute input');
+                    inputs.forEach(input => {
+                        const label = input.nextElementSibling;
+                        input.addEventListener('input', () => {
+                            if (input.value !== '') {
+                                label.classList.add('active');
+                            } else {
+                                label.classList.remove('active');
+                            }
+                        });
+                    });
+
+                    // funcion para cambiar displayen inicio de sesion
+                    var inicio = document.getElementById('iniciarSesion')
+                    var recuperarContrasena = document.getElementById('recuperarContrasena')
+                    var registrarse = document.getElementById('registrarse')
+
+                    var recuperar = document.getElementById('recuperar')
+                    recuperar.addEventListener('click', function (event) {
+                        event.preventDefault()
+                        inicio.style.display = 'none'
+                        recuperarContrasena.style.display = 'block'
+                    })
+
+                    var registrar = document.getElementById('registrar')
+                    registrar.addEventListener('click', function (event) {
+                        event.preventDefault()
+                        inicio.style.display = 'none'
+                        registrarse.style.display = 'block'
+                    })
+
+                    document.getElementsByClassName('reset').addEventListener('click', function (event) {
+                        event.preventDefault()
+                        history.back()
+                    })
+
+                </script>
+    </body>
+
+</html>

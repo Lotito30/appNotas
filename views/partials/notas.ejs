@@ -1,0 +1,14 @@
+<% for (let index = 0; index < notas.length; index++) { %>
+    <div class="abrirNuevo">
+      <h2><%= notas[index ].titulo %></h2>
+      <p><%= notas[index ].textarea %></p>
+      <ul class="principalUl">
+        <li class="dropdown navbar-content ">
+            <ul class="editarBorrar">
+                <li class="editar-content">Editar</li>
+                <li class="editar-content">Borrar</li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+<% } %>
