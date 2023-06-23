@@ -25,5 +25,9 @@ function cambiarColorCuerpo(color){
   }
 }
   
+function focus(){
+  const inputFocus = document.getElementById('titulo')
+  inputFocus.focus()
+  inputFocus.setSelectionRange(inputFocus.value.length,inputFocus.value.length)
+}
 
-  

@@ -397,8 +397,8 @@ form .reset:hover{
   margin-top:1rem;
   cursor: pointer;
 }
-#guardada div h2,
-#guardada div p{
+#guardada .abrirNuevo h2,
+#guardada .abrirNuevo p{
   margin-top: .5rem;
   text-transform: capitalize;
   text-overflow: ellipsis;
@@ -408,7 +408,7 @@ form .reset:hover{
 .abrirNuevo{
   box-shadow: 1px 2px .2rem #666;
   position: relative;
-  
+
 }
 .abrirNuevo h2{
   color: white;
