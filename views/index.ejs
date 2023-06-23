@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
-
-<%- include('./partials/head') %>
+  <%- include('./partials/head') %>
 
   <body>
-<%- include('./partials/header') %>
-      <!-- PLANTILLA -->
-      <section id="contenedor" class="container ">
-        <div class="centro index">
-          <h3>Fijadas</h3>
-          <div id="guardada">
-
-           <%- include('./partials/cicloForNotas') %>
-
-          <a href="/notas/formularioNota"><button class="btn-1"><i class="fas fa-pencil fa-2x"></i></button></a>
-          </div>
+    <%- include('./partials/header') %>
+    <!-- PLANTILLA -->
+    <section id="contenedor" class="container">
+      <div class="centro index">
+        <h3>Fijadas</h3>
+        <div id="guardada">
+          <%- include('./partials/cicloForNotas') %>
+          <a href="/notas/formularioNota">
+            <button class="btn-1"><i class="fas fa-pencil fa-2x"></i></button>
+          </a>
         </div>
-      </section>
-      
-<%- include('./partials/footer') %>
-  </body>
+      </div>
+    </section>
 
+    <%- include('./partials/footer') %>
+  </body>
 </html>

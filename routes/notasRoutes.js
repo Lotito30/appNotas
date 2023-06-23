@@ -1,17 +1,16 @@
-const express = require('express')
-const router = express.Router()
-const notasController = require('../controllers/notasController')
+const express = require("express");
+const router = express.Router();
+const notasController = require("../controllers/notasController");
 
-router.get('/',notasController.mostrarNotas)
-router.post('/',notasController.guardarNota)
+router.get("/", notasController.mostrarNotas);
+router.post("/", notasController.guardarNota);
+router.get("/detalle/:id", notasController.detalleProducto);
 
-router.get('/formularioNota',notasController.crearNota)
+router.get("/formularioNota", notasController.crearNota);
 
-router.get('/editarNota/:id',notasController.editarNota)
-router.post('/:id',notasController.actualizarNota)
+router.get("/editarNota/:id", notasController.editarNota);
+router.post("/:id", notasController.actualizarNota);
 
-router.post('/borrar/:id',notasController.borrarNota)
+router.post("/borrar/:id", notasController.borrarNota);
 
-
-
-module.exports = router
+module.exports = router;

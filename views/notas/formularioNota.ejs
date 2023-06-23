@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
-<body>
-<%- include('../partials/header') %> 
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
 
-<section id="formulario" class="container">
-    <div class="titulo">
-      <span id="mensaje"></span>
-    </div>
-    <div class="centro centroForm">
-      <a href="/" class="volver">
-        <i class="fas fa-home fa-2x"></i>
-      </a>
-      <form action='/notas' method="post">
-        <input autofocus type="text" placeholder="Titulo" id="titulo"  name="titulo"/>
-        <textarea placeholder="Ingresa tu mensaje" id="textarea" name="textarea"></textarea>
-        <button class="submit" type="submit"><i class="fas fa-save"></i>Guardar</button>
-      </form>
-    </div>
-</section>
+    <section id="formulario" class="container">
+      <div class="titulo">
+        <span id="mensaje"></span>
+      </div>
+      <div class="centro centroForm">
+        <a href="/" class="volver formulario">
+          <i class="fas fa-home fa-2x"></i>
+        </a>
+        <form action="/notas" method="post">
+          <input
+            autofocus
+            type="text"
+            placeholder="Titulo"
+            id="titulo"
+            name="titulo"
+          />
+          <textarea
+            placeholder="Ingresa tu mensaje"
+            id="textarea"
+            name="textarea"
+          ></textarea>
+          <button class="submit" type="submit">
+            <i class="fas fa-save"></i>Guardar
+          </button>
+        </form>
+      </div>
+    </section>
 
-<%- include('../partials/footer') %>   
-</body>
+    <%- include('../partials/footer') %>
+  </body>
 </html>

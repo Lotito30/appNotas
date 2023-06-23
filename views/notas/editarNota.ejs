@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
-<body onload="focus()">
-<%- include('../partials/header') %> 
+  <%- include('../partials/head') %>
+  <body onload="focus()">
+    <%- include('../partials/header') %>
 
-<section id="formulario" class="container">
-    <div class="titulo">
-      <span id="mensaje"></span>
-    </div>
-    <div class="centro centroForm">
-      <a href="/" class="volver">
-        <i class="fas fa-home fa-2x"></i>
-      </a>
-      <form action='/notas/<%= nota.id %>' method="post">
-        <input autofocus type="text" placeholder="Titulo" id="titulo" name="titulo" value="<%= nota.titulo %>"/>
+    <section id="formulario" class="container">
+      <div class="titulo">
+        <span id="mensaje"></span>
+      </div>
+      <div class="centro centroForm">
+        <a href="/" class="volver">
+          <i class="fas fa-home fa-2x"></i>
+        </a>
+        <form action="/notas/<%= nota.id %>" method="post">
+          <input
+            autofocus
+            type="text"
+            placeholder="Titulo"
+            id="titulo"
+            name="titulo"
+            value="<%= nota.titulo %>"
+          />
 
-        <textarea placeholder="Ingresa tu mensaje" id="textarea" name="textarea"><%= nota.textarea %></textarea>
+          <textarea
+            placeholder="Ingresa tu mensaje"
+            id="textarea"
+            name="textarea"
+          >
+          <%= nota.textarea %>
+          </textarea>
 
-        <button class="submit" type="submit"><i class="fas fa-save"></i>Guardar</button>
-      </form>
+          <button class="submit" type="submit">
+            <i class="fas fa-save"></i>Guardar
+          </button>
+        </form>
+      </div>
+    </section>
 
-    </div>
-</section>
-
-<%- include('../partials/footer') %>   
-</body>
+    <%- include('../partials/footer') %>
+  </body>
 </html>

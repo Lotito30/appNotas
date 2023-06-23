@@ -1,21 +1,23 @@
 <% for (let index = 0; index < notas.length; index++) { %>
-    <div class="abrirNuevo">
-      <h2><%= notas[index].titulo %></h2>
-      <p><%= notas[index].textarea %></p>
-      <ul class="principalUl">
-        <li class="dropdown navbar-content ">
-            <ul class="editarBorrar">
-                <a href="/notas/editarNota/<%= notas[index].id %>">
-                    <li class="editar-content">Editar</li>
-                </a>
-                <form action="/notas/borrar/<%= notas[index].id %>" method="post">
-                    <li class="editar-content">
-                        <input type="submit" value="Borrar">
-                    </li>
-                </form>
-                
-            </ul>
-        </li>
-        </ul>
-    </div>
+<div class="abrirNuevo">
+  <h2><%= notas[index].titulo %></h2>
+  <p><%= notas[index].textarea %></p>
+  <ul class="principalUl">
+    <li class="dropdown navbar-content">
+      <ul class="editarBorrar">
+        <a href="/notas/detalle/<%= notas[index].id %>">
+          <li class="editar-content">Detalle</li>
+        </a>
+        <a href="/notas/editarNota/<%= notas[index].id %>">
+          <li class="editar-content">Editar</li>
+        </a>
+        <form action="/notas/borrar/<%= notas[index].id %>" method="post">
+          <li class="editar-content">
+            <input type="submit" value="Borrar" />
+          </li>
+        </form>
+      </ul>
+    </li>
+  </ul>
+</div>
 <% } %>
