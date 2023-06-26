@@ -6,17 +6,17 @@ const notasList = JSON.parse(fs.readFileSync(notasListPath, "utf-8"));
 
 const notasController = {
   mostrarNotas: (req, res) => {
-    const title = "Notas - Bloc de notas";
+    const title = "Notas";
     res.render("index", { title: title, notas: notasList });
   },
   detalleProducto: (req, res) => {
-    const title = "Notas - Bloc de notas";
+    const title = "Notas";
     const id = req.params.id;
     const mostrarNota = notasList.find((nota) => nota.id === id);
     res.render("notas/detalleNota", { title: title, notas: mostrarNota });
   },
   crearNota: (req, res) => {
-    const title = "Crear notas - Bloc de notas";
+    const title = "Crear notas";
     res.render("notas/formularioNota", { title: title });
   },
   guardarNota: (req, res) => {
@@ -32,7 +32,7 @@ const notasController = {
     res.redirect("/notas");
   },
   editarNota: (req, res) => {
-    const title = "Editar notas - Bloc de notas";
+    const title = "Editar notas";
     const id = req.params.id;
     const notaEditar = notasList.find((nota) => nota.id === id);
     res.render("notas/editarNota", { title: title, nota: notaEditar });

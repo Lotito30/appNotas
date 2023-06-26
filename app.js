@@ -1,9 +1,11 @@
 const path = require("path");
 const express = require("express");
-const mainRoutes = require("./routes/mainRoutes");
-const notasRoutes = require("./routes/notasRoutes");
 
 const PORT = process.env.PORT || 3000;
+const mainRoutes = require("./routes/mainRoutes");
+const notasRoutes = require("./routes/notasRoutes");
+const usuarioRoutes = require("./routes/usuarioRoutes");
+
 const app = express();
 
 // configura el middleware para procesar los datos enviados en el cuerpo de una solicitud HTTP
@@ -20,6 +22,7 @@ app.use(express.static("public"));
 // mainRoutes
 app.use("/", mainRoutes);
 app.use("/notas", notasRoutes);
+app.use("/usuario", usuarioRoutes);
 
 // app.get('/', function (req, res) {
 //   res.sendFile(path.join(__dirname, 'views/index.html'))

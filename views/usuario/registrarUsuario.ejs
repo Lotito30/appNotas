@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+<body>
+<%- include("../partials/header") %>
+
+    <div class="contenedor centro">
+      <div class="contenedorContenido">
+        <h1>Registrarse</h1>
+        <div class="contenedorFormulario">
+          <form action="">
+            <div class="absolute">
+              <span class="icono"><i class="fas fa-user-alt"></i></span>
+              <input type="text" id="inputForm" autocomplete="off" />
+              <label for="nombre">Nombre</label>
+            </div>
+            <div class="absolute">
+              <span class="icono"><i class="fas fa-envelope"></i></span>
+              <input
+                type="email"
+                id="inputForm"
+                name="mail"
+                autocomplete="off"
+              />
+              <label for="mail">Email</label>
+            </div>
+            <div class="absolute">
+              <span class="icono"><i class="fas fa-user-circle"></i></span>
+              <input type="text" id="inputForm" autocomplete="off" />
+              <label for="usuario">Usuario</label>
+            </div>
+            <div class="absolute">
+              <span class="icono"><i class="fas fa-lock"></i></span>
+              <input type="password" id="inputForm" autocomplete="off" />
+              <label for="password">Contraseña</label>
+            </div>
+          
+            <button class="submit" id="submit" type="submit">
+              <i class="fas fa-user-plus"></i> Registrarse
+            </button>
+          
+            <button class="reset">
+              <a href="/usuario/iniciarSesion"><i class="fas fa-arrow-alt-circle-left"></i> Volver
+              </a>          
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+<%- include("../partials/footer") %>
+</body>
+</html>

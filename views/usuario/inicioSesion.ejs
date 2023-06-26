@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <%- include('../partials/head') %>
+
+  <body onload="inicio()">
+    <%- include('../partials/header') %>
+
+        <div class="contenedor centro">
+          <a href="/" class="home"
+            ><i class="fas fa-home fa-2x"></i
+          ></a>
+          <div class="contenedorContenido">
+            <h1>Iniciar Sesión</h1>
+            <div class="contenedorFormulario">
+              <form action="">
+                <div class="absolute">
+                  <span class="icono"><i class="fas fa-user-circle"></i></span>
+                  <input type="text" id="inputForm" autocomplete="off" />
+                  <label for="usuario">Usuario</label>
+                </div>
+                <div class="absolute">
+                  <span class="icono"><i class="fas fa-lock"></i></span>
+                  <input type="password" id="inputForm" autocomplete="off" />
+                  <label for="password">Contraseña</label>
+                </div>
+                <button class="submit">
+                  <i class="fas fa-sign-in"></i> Iniciar
+                </button>
+              </form>
+              <div class="recuerdame">
+                <input type="checkbox" name="recuerdame" id="" />
+                <label for="recuerdame">Recuerdame</label>
+              </div>
+              <p>
+                Se te olvido la contraseña?
+                <a href="/usuario/recuperarContrasena" id="recuperar">recuperar contraseña</a>
+              </p>
+              <div class="btn-redSocial">
+                <div class="google">
+                  <img src="../img/google.png" alt="" />
+                  <span>Continua con Google</span>
+                </div>
+                <div class="fb">
+                  <img src="../img/facebook.png" alt="" />
+                  <span>Continua con Facebook</span>
+                </div>
+              </div>
+              <p>
+                No tienes usuario?
+                <a href="/usuario/registrarse" id="registrar">
+                  registrarse
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+    <%- include('../partials/footer') %>
+  </body>
+</html>

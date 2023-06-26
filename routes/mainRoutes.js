@@ -1,11 +1,10 @@
 const express = require("express");
 
-const mainRoutes = express.Router();
+const router = express.Router();
 
 const mainController = require("../controllers/mainController");
 
-mainRoutes.get("/", mainController.index);
-mainRoutes.get("/preguntas", mainController.preguntas);
-mainRoutes.get("/iniciosesion", mainController.inicioSesion);
+router.get("/", mainController.index);
+router.get("/preguntas", mainController.preguntas);
 
-module.exports = mainRoutes;
+module.exports = router;

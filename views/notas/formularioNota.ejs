@@ -3,34 +3,34 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-
-    <section id="formulario" class="container">
-      <div class="titulo">
-        <span id="mensaje"></span>
-      </div>
-      <div class="centro centroForm">
-        <a href="/" class="volver formulario">
-          <i class="fas fa-home fa-2x"></i>
-        </a>
-        <form action="/notas" method="post">
-          <input
+    <div class="centro contenedor">
+      <a href="/" class="home">
+        <i class="fas fa-home fa-2x"></i>
+      </a>
+      <div class="contenedorContenido"> 
+        <h1>Nota</h1>
+        <div class="contenedorFormulario">
+          <form action="/notas" method="post" class="formulario">
+            <input
             autofocus
             type="text"
             placeholder="Titulo"
             id="titulo"
             name="titulo"
-          />
-          <textarea
+            />
+            <textarea
             placeholder="Ingresa tu mensaje"
             id="textarea"
             name="textarea"
-          ></textarea>
-          <button class="submit" type="submit">
-            <i class="fas fa-save"></i>Guardar
-          </button>
-        </form>
+            ></textarea>
+            <button class="submit" type="submit">
+              <i class="fas fa-save"></i>Guardar
+            </button>
+            <span id="mensaje"></span>
+          </form>
+        </div>
       </div>
-    </section>
+      </div>
 
     <%- include('../partials/footer') %>
   </body>

@@ -49,26 +49,6 @@ function inicio() {
       }
     });
   });
-
-  // funcion para cambiar displayen inicio de sesion
-  var inicio = document.getElementById("iniciarSesion");
-  var recuperarContrasena = document.getElementById("recuperarContrasena");
-  var registrarse = document.getElementById("registrarse");
-
-  var recuperar = document.getElementById("recuperar");
-  recuperar.addEventListener("click", function (event) {
-    event.preventDefault();
-    inicio.style.display = "none";
-    recuperarContrasena.style.display = "block";
-  });
-
-  var registrar = document.getElementById("registrar");
-  registrar.addEventListener("click", function (event) {
-    event.preventDefault();
-    inicio.style.display = "none";
-    registrarse.style.display = "block";
-  });
-
   document
     .getElementsByClassName("reset")
     .addEventListener("click", function (event) {

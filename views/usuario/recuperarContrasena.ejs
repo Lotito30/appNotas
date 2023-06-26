@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+<body>
+<%- include("../partials/header") %>
+    
+    <div class="contenedor centro">
+      <div class="contenedorContenido">
+        <h1>Recuperar Contraseña</h1>
+        <div class="contenedorFormulario">
+          <form action="">
+            <div class="absolute">
+              <span class="icono"><i class="fas fa-envelope"></i></span>
+              <input
+                type="email"
+                id="inputForm"
+                name="email"
+                autocomplete="off"
+              />
+              <label for="email">Email</label>
+            </div>
+            <button class="submit" type="submit">
+              <i class="fas fa-key"></i> Recuperar Contraseña
+            </button>
+            <button class="reset">
+              <a href="/usuario/iniciarSesion"><i class="fas fa-arrow-alt-circle-left"></i> Volver
+              </a>
+            </button>
+          </form>
+          <h3 id="mensaje"></h3>
+        </div>
+      </div>
+    </div>
+<%- include("../partials/footer") %>
+</body>
+</html>

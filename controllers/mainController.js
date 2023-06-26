@@ -10,13 +10,9 @@ const mainController = {
     res.render("index", { title: title, notas: notasList });
   },
   preguntas: (req, res) => {
-    let title = "Preguntas Frecuentes - Bloc de Notas";
+    let title = "Preguntas Frecuentes";
     res.render("preguntas", { title: title });
-  },
-  inicioSesion: (req, res) => {
-    let title = "Iniciar Sesion - Bloc de Notas";
-    res.render("inicioSesion", { title: title });
-  },
+  }
 };
 
 module.exports = mainController;
