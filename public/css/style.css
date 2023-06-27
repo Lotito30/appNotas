@@ -1,27 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
 :root {
   --letra: "Roboto Slab", serif;
-  --box-shadow:#666;
-  --text-shadow:#fff;
-  --background-body:#fff;
   --color-letra:#666;
-  --fondo-amarillo:#f5d03f;
 }
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-}
-
-body {
-  font-family: var(--letra);
-  min-width: 420px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background: url("/img/fondohtml.jfif");
 }
 h1{
   font-size: 2.5rem;
@@ -33,7 +20,15 @@ h3{
   font-size: 1.5rem;
 }
 h4{
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+
+body {
+  font-family: var(--letra);
+  min-width: 420px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: url("/img/fondohtml.jfif");
 }
 .home {
   position: absolute;
@@ -53,7 +48,7 @@ h4{
 }
 /* HEADER */
 header {
-  background-color: var(--fondo-amarillo);
+  background-color: #f5d03f;
   position: fixed;
   top: 0;
   right: 0;
@@ -104,7 +99,6 @@ header {
   background-color: rgb(235, 235, 235);
   border-radius: 10px;
 }
-
 .dropdownLi {
   color: #1e1e1e;
   padding: 0.5rem;
@@ -192,7 +186,7 @@ header {
   align-items: center;
 }
 .contenedorContenido {
-  background-color: var(--fondo-amarillo);
+  background-color: #4a4949;
   padding: 1rem 2rem;
   font-weight: 600;
   text-align: center;
@@ -252,7 +246,6 @@ form {
   top: 3px;
   font-weight: bold;
 }
-
 .absolute input {
   width: 95%;
   height: 20px;
@@ -274,7 +267,6 @@ form {
   right: 0;
   font-size: 1.2rem;
 }
-
 form button {
   color: white;
   padding: 0.5rem;
@@ -286,7 +278,6 @@ form button {
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem #666;
 }
-
 form .submit {
   background-color: rgb(7, 168, 130);
 }
@@ -342,7 +333,6 @@ form .reset:hover {
 /* MAIN */
 
 /* NOTAS FIJADAS*/
-
 #guardada {
   display: flex;
   flex-wrap: wrap;
@@ -371,6 +361,7 @@ form .reset:hover {
 }
 .abrirNuevo:hover {
   transform: scale(1.05);
+  background-color: rgba(70,70,70,.1);
 }
 .btn-1 {
   position: absolute;
@@ -388,8 +379,8 @@ form .reset:hover {
 .btn-1:hover {
   transform: scale(1.05);
 }
-.contenedorDetalle {
-  text-align: center;
+.fa-edit{
+  color: #000;
 }
 
 /* FORMULARIO */
@@ -397,7 +388,6 @@ form .reset:hover {
 .contenedorFormulario, #textarea {
   display: flex;
   padding: .5rem;
-  align-items: center;
   font-size: 1rem;
   resize: none;
   outline: none;
@@ -447,7 +437,6 @@ textarea::placeholder {
 .sigueme p {
   color: black;
 }
-
 .fa-brands {
   font-size: 1rem;
   width: 1.5rem;
@@ -458,7 +447,6 @@ textarea::placeholder {
   border-radius: 100%;
   color: #ffffff;
 }
-
 .fa-instagram {
   background: linear-gradient(
     to top right,
@@ -468,8 +456,7 @@ textarea::placeholder {
     #ae4198,
     #7540a1,
     #5443a8
-  );
-  
+  ); 
 }
 .fa-facebook {
   background: #1e4595;  
@@ -481,14 +468,12 @@ textarea::placeholder {
 .fa-github {
   background: linear-gradient(to right top, #42a9ec, #358de6); 
 }
-
 .fa-twitter:hover,
 .fa-github:hover,
 .fa-facebook:hover,
 .fa-instagram:hover {
   color: #000;
 }
-
 @media (max-width: 520px) {
   .icon-footer {
     width: 50%;

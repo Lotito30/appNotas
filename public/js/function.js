@@ -11,7 +11,7 @@ let cambiarColor = {
 
 function cambiarColorCuerpo(color) {
   let contenido = document.querySelectorAll(
-    ".faq,#contenedor h3,#guardada div,#guardada div h2,#guardada div p"
+    ".preguntas,.centro h3,#guardada div,#guardada div h2,#guardada div p"
   );
 
   let centro = document.querySelector(".centro");
@@ -36,7 +36,7 @@ function focus() {
 
 // Inicio de sesion
 
-function inicio() {
+function ususario() {
   // funcion para que los label se queden arriba cuando haya caracteres dentro del input
   const inputs = document.querySelectorAll(".absolute input");
   inputs.forEach((input) => {
