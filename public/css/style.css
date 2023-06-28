@@ -407,7 +407,13 @@ textarea::placeholder {
 .contenedorFormulario textarea {
   height: 250px;
 }
-
+/* DETALLE */
+.detalleNota{
+  text-align: center;
+}
+#guardada .detalleNota{
+  margin-top: 2rem;
+}
 /*FOOTER*/
 .footer {
   background: black;

@@ -4,6 +4,7 @@ const notasController = require("../controllers/notasController");
 
 router.get("/", notasController.mostrarNotas);
 router.post("/", notasController.guardarNota);
+
 router.get("/detalle/:id", notasController.detalleProducto);
 
 router.get("/formularioNota", notasController.crearNota);

@@ -5,21 +5,18 @@
 <body>
     <%- include('../partials/header') %>
     <div class="centro contenedorDetalle">
-      <a href="/" class="home detalleNota">
+      <a href="/notas" class="home detalleNota">
         <i class="fas fa-home fa-2x"></i>
       </a>
-      <h1 class="detalleNota">Detalle de la nota '<%= notas.titulo %>'</h1>
-      <h4 class="detalleNota">Creada el '<%= notas.creacion %>'</h4>
+      <h2 class="detalleNota">Detalle de la nota '<%= notas.titulo %>'</h2>
+      <h4 class="detalleNota">Creada el '<%= notas.creacion %>'</h>
 
       <div id="guardada">
-        <div class="abrirNuevo">
-          <h2>
-            <%= notas.titulo %>
-          </h2>
-          <p>
+        <p class="detalleNota">Contenido:</p>
+          <p class="detalleNota">
             <%= notas.textarea %>
           </p>
-        </div>
+      </div>
         <a href="/notas/formularioNota">
           <button class="btn-1">
             <i class="fas fa-pencil fa-2x">
