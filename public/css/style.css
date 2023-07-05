@@ -153,11 +153,36 @@ header {
 .white {
   background-color: #ebebeb;
 }
+.icono-menu i{
+  display: none;
+  background-image: linear-gradient(to top right,
+  #fcde30,
+  #e9712a,
+  #d2313b,
+  #ae4198,
+  #7540a1,
+  #5443a8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: .1rem solid transparent;
+}
+.icono-menu i:hover{
+  cursor: pointer;
+  transform: scale(1.08);
+  border-color: #fff;
+  border-radius: 100%;
+}
+.icono-menu i:hover .contenedorColores{
+  background-color: red;
+  padding: 5rem;
+}
+
+
 /* FIN NAVBAR */
 
 .centro {
   background-color: white;
-  padding: 10rem 1rem 1rem 1rem;
+  padding: 10rem 1rem;
   position: relative;
   color: var(--color-letra);
 }
@@ -486,5 +511,14 @@ textarea::placeholder {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 1rem auto;
+  }
+}
+
+@media(max-width:620px){
+  .contenedorColor {
+    display: none;
+  }
+  .icono-menu i{
+    display: inline-block;
   }
 }

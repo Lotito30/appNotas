@@ -1,0 +1,21 @@
+<% notas.map( nota => { %>
+
+<div class="abrirNuevo dropdown">
+  <h2><%= nota.titulo %></h2>
+  <p><%= nota.textarea %></p>
+      <ul class="dropdownContenido">
+        <a href="/notas/detalle/<%= nota.id %>">
+          <li class="dropdownLi">Detalle</li>
+        </a>
+        <a href="/notas/editarNota/<%= nota.id %>">
+          <li class="dropdownLi">Editar</li>
+        </a>
+        <form action="/notas/borrar/<%= nota.id %>" method="post">
+          <li class="dropdownLi">
+            <input type="submit" value="Borrar" class="dropdownLi"/>
+          </li>
+        </form>
+      </ul>
+</div>
+
+<% }) %>
